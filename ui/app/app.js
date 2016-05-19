@@ -140,6 +140,7 @@ App.prototype.renderAppBar = function(){
           visibility: state.isUnlocked ? 'visible' : 'none',
           background: state.isUnlocked ? 'white' : 'none',
           height: '36px',
+          padding: '6px 0px 6px 8px',
           position: 'relative',
           zIndex: 1,
         },
@@ -157,9 +158,12 @@ App.prototype.renderAppBar = function(){
 
         // hamburger
         h(SandwichExpando, {
-          width: 16,
+          width: 20,
           barHeight: 2,
           padding: 0,
+          style: {
+            marginRight: '5px',
+          },
           isOpen: state.menuOpen,
           color: 'rgb(247,146,30)',
           onClick: (event) => {
